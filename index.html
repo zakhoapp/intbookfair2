@@ -50,7 +50,8 @@ form.addEventListener('submit',e=>{
 window.addEventListener('message',e=>{
   const data=e.data;
   if (!data || data.type!=='zakho-registration-result' || !pendingNonce || data.nonce!==pendingNonce) return;
-  if (e.source !== document.getElementById('registrationReceiver').contentWindow) return;
+  // Apps Script redirects the response through googleusercontent.com; validate nonce instead of frame source.
+  if (e.origin !== 'https://script.googleusercontent.com' && e.origin !== 'https://script.google.com') return;
   pendingNonce=null;
   clearTimeout(submissionTimer);
   submitButton.disabled=false;
