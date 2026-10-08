@@ -23,9 +23,9 @@ const form = document.getElementById('registration');
 const status = document.getElementById('success');
 const submitButton = form.querySelector('[type="submit"]');
 const labels = {
-  ku:{sending:'تۆمارکرن دهێتە هنارتن...',saved:'تۆمارکرن ب سەرکەفتی هاتە خەزنکرن. کۆد: ',error:'هنارتن سەرنەکەفت. دووبارە هەوڵ بدە.',setup:'پێدڤیە لینکێ Google Apps Script بهێتە دانان.'},
-  ar:{sending:'جارٍ إرسال التسجيل...',saved:'تم حفظ التسجيل بنجاح. الرمز: ',error:'فشل الإرسال. يرجى المحاولة مجدداً.',setup:'يجب إعداد رابط Google Apps Script أولاً.'},
-  en:{sending:'Submitting registration...',saved:'Registration saved successfully. ID: ',error:'Submission failed. Please try again.',setup:'Configure the Google Apps Script URL first.'}
+  ku:{sending:'تۆمارکرن هاتە هنارتن.',saved:'تۆمارکرن ب سەرکەفتی هاتە خەزنکرن. کۆد: ',error:'هنارتن سەرنەکەفت. دووبارە هەوڵ بدە.',setup:'پێدڤیە لینکێ Google Apps Script بهێتە دانان.'},
+  ar:{sending:'تم إرسال التسجيل.',saved:'تم حفظ التسجيل بنجاح. الرمز: ',error:'فشل الإرسال. يرجى المحاولة مجدداً.',setup:'يجب إعداد رابط Google Apps Script أولاً.'},
+  en:{sending:'Registration submitted.',saved:'Registration saved successfully. ID: ',error:'Submission failed. Please try again.',setup:'Configure the Google Apps Script URL first.'}
 };
 function showStatus(message,ok){status.textContent=message;status.style.display='block';status.style.background=ok?'#eaf8f0':'#fff1ee';status.style.color=ok?'#17643d':'#9b2c20';}
 form.addEventListener('submit',e=>{
